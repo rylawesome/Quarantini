@@ -28,6 +28,7 @@ $.ajax({
   }).then(function(response) {
     console.log(response);
     console.log(response.drinks[0].strDrink);
+    document.getElementById("drinkName").innerHTML = response.drinks[0].strDrink;
   });
 
   //Giphy API key
