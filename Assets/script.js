@@ -10,5 +10,4 @@ $.ajax({
     console.log(response);
     console.log(response.drinks[0]);
     console.log(response.drinks[0].strDrink);
-    console.log(response.drinks[0].strDrink);
   });
