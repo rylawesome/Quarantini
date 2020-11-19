@@ -1,5 +1,6 @@
 //This is how to comment in javascript
 
+
 test = true;
 
 if (test === true) {
@@ -10,15 +11,10 @@ else {
     };
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
 var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
+=======
+var drink = "margarita"
+var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink
 
-//testing a margarita
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response);
-    console.log(response.drinks[0]);
-    console.log(response.drinks[0].strDrink);
   });
 
 $.ajax({
@@ -31,3 +27,6 @@ $.ajax({
 
   //Giphy API key
   //KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV
+=======
+  });
+

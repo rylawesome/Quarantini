@@ -1,1 +1,17 @@
 /*This is how to comment in CSS*/
+.beverage {
+    border: black solid 2px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.gif {
+    border: black solid 2px;
+    height: 250px;
+    margin-top: 10px;
+
+}
+
+footer {
+    text-align: center;
+}
