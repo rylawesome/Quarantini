@@ -1,5 +1,13 @@
 //This is how to comment in javascript
-var drink = "margarita";
+
+test = true;
+
+if (test === true) {
+    var drink = "margarita";
+    }
+else {
+    var drink = "";
+    };
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
 var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
 
