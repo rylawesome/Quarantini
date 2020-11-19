@@ -1,4 +1,5 @@
 //This is how to comment in javascript
+
 var drink = "margarita"
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink
 
