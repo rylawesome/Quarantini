@@ -1,17 +1,87 @@
 /*This is how to comment in CSS*/
 .beverage {
-    border: black solid 2px;
+    border: #e7e7ec solid 2px;
     height: 250px;
     margin-top: 10px;
 }
 
 .gif {
-    border: black solid 2px;
+    border: #e7e7ec solid 2px;
     height: 250px;
     margin-top: 10px;
 
 }
 
+
+body {
+    background: url("./Images/websiteBackground.jpg");
+}
+
+h3 {
+    text-align: center;
+    color:#e7e7ec;
+
+
+}
+
+header {
+    text-align: center;
+    color:#e7e7ec;
+    font-family: 'Lora', serif;}
+
+h1 {
+    font-family: fantasy;
+    color:#e7e7ec;
+
+
+}
+
+#formCSS {
+    margin-top: 10px;
+    
+}
+
+.formContainer {
+text-align: center;
+}
+
+h2 {
+    font-family: fantasy;
+    color:#e7e7ec;
+
+
+}
+
+
+
+body {
+    background-color: #950740
+}
+
+div {
+    font-family: fantasy;
+}
+
+
+
+
+
 footer {
     text-align: center;
+}
+
+section {
+    background: url("./Images/divBackground.jpg");
+    font-family: fantasy;
+    opacity: .5;
+
+
+}
+
+article {
+
+    background: url("./Images/divBackground.jpg");
+    font-family: fantasy;
+    opacity: .5;
+
 }
