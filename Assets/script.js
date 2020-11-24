@@ -3,6 +3,7 @@ var drink = "";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
 var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
+document.getElementById("giphy-link").style.display = 'none';
 
 $("#run-search").on("click", function(event) {
     event.preventDefault();
@@ -27,6 +28,7 @@ $("#run-search").on("click", function(event) {
         console.log(response);
         document.getElementById("giphy-embed").src = response.data[0].embed_url;
         document.getElementById("giphy-link").href = response.data[0].url;
+        document.getElementById("giphy-link").style.display = 'block';
       });
 });
 
