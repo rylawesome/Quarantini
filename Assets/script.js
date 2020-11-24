@@ -1,4 +1,7 @@
 //This is how to comment in javascript
+// var instance = M.Modal.getInstance(elem);
+
+
 
 
 test = true;
@@ -33,4 +36,11 @@ $.ajax({
 
   //Giphy API key
   //KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV
+
+
+
+  // Dev- js
+
+
+
 
