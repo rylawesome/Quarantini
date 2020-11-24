@@ -19,6 +19,14 @@ $("#run-search").on("click", function(event) {
         console.log(response);
         console.log(response.drinks[0].strDrink);
         document.getElementById("drinkName").innerHTML = response.drinks[0].strDrink;
+        document.getElementById("beverage").innerHTML = response.drinks[0].strInstructions;
+        var drinkThumb = response.drinks[0].strDrinkThumb;
+        if(response.drinks[0].strDrinkThumb !== null){
+          document.body.style.background = 'url(' + drinkThumb + ')';
+        }
+        else {
+          document.body.style.background = url("./Images/websiteBackground.jpg");
+        }
       });
       $.ajax({
         url: queryURLgiphy,
