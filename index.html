@@ -6,53 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
-
+    <!--added the applicable bulma CDN url below -->
+    <link href="https://www.jsdelivr.com/package/npm/bulma" rel="stylesheet">
     <link rel="stylesheet" href="./Assets/style.css"/>
 
-
     <title>Quarantini</title>
+
   </head>
+
   <body>
-
-    <header class="header">
+    <!--header-->
+    <!--I think bulma uses the "title" class for h1 divs- we may need remove the "header" class CR-->
+    <header class="header" class="title">
       <h1>Quarantini</h1>
-      </header>
-
-
+      <!--I was able to get the hero image set but it needs better formatting CR-->
+      <hero>
+        <img src="./Assets/Images/cocktail.jpg" alt="beverages" style="width:1000px;height:200px;">
+      </hero>
+    </header>
+    
      <main>
+       <!--this is the input field-->
+        <section>
          <div class="formBox">
-             <h3>Enter your choice of alcohol to find your next favorite beverage!</h3>
+             <h3>What'll it be?</h3>
              <div class="formContainer">
              <form>
-             <input type="text" placeholder="What'll it be?" />
-             <button>Submit</button>
+             <input type="text" id="search-term"/>
+             <button id="run-search">Submit</button>
              </form>
              </div>
-            </div>
-      
-         <h2 id = "drinkName">Your beverage</h2>
+          </div>
+        </section>   
+         <!--these are the divs that display the content of API CR--> 
+        <section>
+          <!-- this is the drink api section CR-->
+         <h2 id = "drinkName"></h2>
 
-         <article id="beverage" class="beverage">
+         <article id="beverage" class="beverage"></article>
          
+         <!-- this is the giphy api section CR-->
+         <h2>Enjoy!</h2>
 
-       
-         </article>
-         
-         <h2>Gif</h2>
-         <section id="gif" class="gif">
-         
-
-
-         </section>
+         <div id="gif" class="gif">
+          <iframe src="" id="giphy-embed" class="giphy-embed"></iframe>
+          <p><a href="" target="_blank" id="giphy-link">via GIPHY</a></p>
+        </section>
+         <!-- this footer is not currently visible I tried to add some css but it didnt fix CR-->
+        <footer>Bringing the Barkeep home, to keep you home and healthy.</footer>
+  
      </main>
-     <footer>
-         Space for addtional ideas
- 
-     </footer>
-
-    <!--This is how to comment in HTML-->
+     
+    <!--js links below-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./Assets/script.js"></script>
-
-</body>
+  </body>
+</html>
