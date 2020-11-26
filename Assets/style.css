@@ -48,15 +48,14 @@ text-align: center;
 h2 {
     font-family: fantasy;
     color:#e7e7ec;
-
-
 }
 
 
 
+/* removed duplicate body class CR: 
 body {
     background-color: #950740
-}
+} */
 
 div {
     font-family: fantasy;
@@ -64,12 +63,22 @@ div {
 
 
 
-
-
+/*the footer is currently not visible CR*/
 footer {
     text-align: center;
+    position: relative;
 }
 
+#heroimage {
+    background: url("./Images/cocktail.jpg");
+}
+
+/* added hide class to allow for receipe div and giphy div to hide until after the button is selected CR*/
+.hide {
+    display:none; 
+}
+
+/* I commented the section and article classes as we were not going to use the div background in the future CR
 section {
     background: url("./Images/divBackground.jpg");
     font-family: fantasy;
@@ -84,4 +93,5 @@ article {
     font-family: fantasy;
     opacity: .5;
 
-}
+}*/
+
