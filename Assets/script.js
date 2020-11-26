@@ -21,6 +21,7 @@ $("#run-search").on("click", function(event) {
  
         document.getElementById("drinkName").innerHTML = response.drinks[0].strDrink;
         document.getElementById("beverage").innerHTML = response.drinks[0].strInstructions;
+
         if(response.drinks[0].strDrinkThumb !== null){
           // $('#drinkPic').style.background-Image = drinkPicURL;
           $(".gif").css("background-image", "url(" + drinkThumb + ")");
@@ -31,6 +32,14 @@ $("#run-search").on("click", function(event) {
         }
         appendDrink(drink);
         //rootEl.find('figure').css('background-color', 'white');
+
+        //var drinkThumb = response.drinks[0].strDrinkThumb;
+        // if(response.drinks[0].strDrinkThumb !== null){
+        //   document.body.style.background = 'url(' + drinkThumb + ')';
+        // }
+        // else {
+        //   document.body.style.background = url("./Images/websiteBackground.jpg");
+        // }
 
       });
       $.ajax({
