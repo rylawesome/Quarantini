@@ -8,6 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">    
+      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">  
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,7 +27,7 @@
       <div class="container">
             <!--Header-->
             <header>
-              <h1>Quarintini</h1>
+              <h1>Quarantini</h1>
               <span>
                 <img src="./Assets/Images/hero_image.jpeg" alt="">
               </span>
@@ -38,7 +41,7 @@
             <!-- May need to modify the input type-->
             <div class="row">
               <div class="formBox col s12 center">
-                <h3>What'll it be?</h3>
+                <h3>What Can I Get for You?</h3>
                 <div class="formContainer">
                   <form>
                     <input class = "grey darken-3" type="text" id="search-term"/>
@@ -53,7 +56,7 @@
                 <!--recipe section-->
                 <div class="row" id="testborder">
                   <div class="col center l6 m8 s12 card-panel grey darken-4" id="testborderA">
-                    <h2 id = "drinkName">DrinkName</h2>
+                    <h2 id = "drinkName"></h2>
                     <!--added tag to allow for recipe to display this is still not fully working-->
                     <article>INGREDIENT LIST</article>
                     <!--This article is the instructions it works well-->
@@ -76,7 +79,20 @@
                     <!--add image tag for giphy here<img> -->
                   </div>
             </div>   
-          
+            <!--Age Verification Modal-->
+          <section id="agemodal">
+            <div id="modal1" class="modal">
+              <div>
+                <h4>Age Verification</h4>
+                <p id="agetext">Are you 21 years old or older?</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+              </div>
+            </div>
+          </section>
+
           <!--this is the local storage section-->
           <div class="col center s12 card-panel grey darken-4" id = "recentlyViewed">LOCAL STORAGE</div>
           <footer class= "center">Bringing the Barkeep home, to keep you home and healthy.</footer>
@@ -85,7 +101,10 @@
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
       <!--<script type="text/javascript" src="js/materialize.min.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="./Assets/script.js"></script>
+
+
 
     </body>
   </html>

@@ -1,3 +1,14 @@
+// Pop Up Age Verification 
+$(document).ready(function(){
+  $('.modal').modal();
+  $('.modal').modal('open'); 
+
+});
+
+
+
+
+
 //This is how to comment in javascript
 var drink = "";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
