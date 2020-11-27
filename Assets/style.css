@@ -1,15 +1,35 @@
-/*This is how to comment in CSS*/
-main {
-    margin-right: 25px;
-    margin-left: 25px;
+.html  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#e7e7ec;
+}
+div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #e7e7ec;
+}
 
+body {
+    /*margin-right: 25px;
+    margin-left: 25px;CR*/
+    background: url("./Images/websiteBackground.jpg");
+}
+
+h1 {
+    font-family: 'Yellowtail', cursive;
+    color:#e7e7ec;
+}
+
+header {
+    color:#e7e7ec;
+}
+
+span {
+    background: url("./Images/hero_image.jpeg");
 }
 
 .beverage {
     border: #e7e7ec solid 2px;
     height: 250px;
     margin-top: 10px;
-    background-color: white;
 }
 
 .gif {
@@ -21,64 +41,36 @@ main {
 }
 
 
-body {
-    background: url("./Images/websiteBackground.jpg");
-}
 
-h3 {
+h2,h3 {
     text-align: center;
-    color:#e7e7ec;
-
-
 }
 
-header {
-    text-align: center;
-    color:#e7e7ec;
-    font-family: 'Lora', serif;}
 
-h1 {
-    font-family: fantasy;
-    color:#e7e7ec;
-
-
-}
-
-#formCSS {
+/*#formCSS {
     margin-top: 10px;
     
 }
+I didnt find this ID listed anywhere so am going to preliminary delete it*/
 
 .formContainer {
 text-align: center;
 }
-
-h2 {
-    font-family: fantasy;
-    color:#e7e7ec;
-}
-
-
 
 /* removed duplicate body class CR: 
 body {
     background-color: #950740
 } */
 
-div {
-    font-family: fantasy;
+input {
+    color:#e7e7ec;
+    text-align: center;
 }
 
 
-
-/*the footer is currently not visible CR*/
 footer {
     text-align: center;
     position: relative;
-}
-
-#heroimage {
-    background: url("./Images/cocktail.jpg");
 }
 
 /* added hide class to allow for receipe div and giphy div to hide until after the button is selected CR*/
@@ -101,7 +93,7 @@ article {
     font-family: fantasy;
     opacity: .5;
 
-}*/
+}
 
 .drinkPicDiv {
     height: 100px;
@@ -109,11 +101,11 @@ article {
     border: black solid 4px;
     object-fit: cover;
 
-}
+}*/
 
 
 #recentlyViewed {
-    background-color: white;
+    text-align: left;
 }
 
 
@@ -125,3 +117,14 @@ li {
     list-style: none;
 }
 
+/*#testborder {
+    border: rgb(40, 107, 40) solid 3px;
+}
+
+#testborderA {
+    border: yellow solid 3px;
+}
+
+#testborderC {
+    border: purple solid 3px;
+}*/
