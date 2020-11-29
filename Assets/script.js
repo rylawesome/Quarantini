@@ -1,13 +1,12 @@
 // Pop Up Age Verification 
-$(document).ready(function(){
-  $('.modal').modal();
-  $('.modal').modal('open'); 
+// setTimeout(function(){
+//   $('.modal').modal('open')}, 1500);
 
-});
+// $(document).ready(function(){
+//   $('.modal').modal();
+// });
 
-
-
-
+// 
 
 //This is how to comment in javascript
 var drink = "";
