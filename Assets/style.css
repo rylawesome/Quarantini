@@ -1,5 +1,5 @@
 .html  {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, 'Great Vibes';
     color:#e7e7ec;
 }
 div {
@@ -23,9 +23,17 @@ header {
     color:#e7e7ec;
 }
 
-span {
-    background: url("./Images/hero_image.jpeg");
+/* img {
+    /* background: url("./Images/cocktail.jpg"); */
+    /* height: 200px;
+    width: 100%;
+    /* background-position: center; */
+    /* background-size: cover; */
 }
+
+/* .stretch {
+    width: 100% */
+} 
 
 .beverage {
     border: #e7e7ec solid 2px;
@@ -129,3 +137,48 @@ li {
 #testborderC {
     border: purple solid 3px;
 }*/
+
+
+
+/* Modal Styling */
+
+.modal{
+    position: fixed;
+    height: 100%;
+    width: 75%;
+    z-index:  1;
+    left: 0;
+    top: 0;
+    left:0;
+    overflow: auto;
+    background-color: rgb(220,220, 220, 0.5);
+}
+
+/* .modal-content{ */
+    /* background-color: #f4f4f4;
+    height: 50%
+    width: 50%; */
+    /* padding: 70px; */
+    /* position:  */
+}
+
+h4 {
+    color: black;
+    /* background-color: blue; */
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Playfair Display'
+}
+
+.agequestion, .agetext {
+    color: blue;
+    text-align: center;
+    font-size: 30px;
+
+
+}
+
+.modal-close{
+    text-align: center;
+
+}
