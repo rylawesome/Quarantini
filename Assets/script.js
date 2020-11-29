@@ -18,6 +18,7 @@ document.getElementById("giphy-link").style.display = 'none';
 
 $("#run-search").on("click", function(event) {
     event.preventDefault();
+    document.getElementById("beverage").innerHTML = "";
     drink = document.getElementById("search-term").value;
     queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
     queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
@@ -26,12 +27,29 @@ $("#run-search").on("click", function(event) {
         method: "GET"
       }).then(function(response) {
         console.log(response)
-        var drinkThumb = response.drinks[0].strDrinkThumb;
-
-        // var drinkPicURL= 'url(' + drinkThumb + ')'
- 
+        var drinkThumb = response.drinks[0].strDrinkThumb + "/preview";
+        //var drinkPicURL= 'url(' + drinkThumb + ')'
+        //Lists ingredients/ammt per ingredient
+        var drinkInfo = response.drinks[0];
+        var node = document.createElement('LI');
+        var instructions = document.createTextNode(response.drinks[0].strInstructions);
+        console.log(drinkInfo);
+        for(i = 1; i <= 15; i++) {
+          if (drinkInfo['strMeasure' + i] !== null) {
+            console.log(drinkInfo['strMeasure' + i]);
+            var measureNode = document.createTextNode(drinkInfo['strMeasure' + i]);
+            node.appendChild(measureNode);
+          }
+          if (drinkInfo['strIngredient' + i] !== null) {
+          console.log(drinkInfo['strIngredient' + i]);
+          var ingNode = document.createTextNode(drinkInfo['strIngredient' + i]);
+          node.appendChild(ingNode);
+          }
+      };
+      document.getElementById("beverage").appendChild(node);
+      document.getElementById("beverage").appendChild(instructions);
+        
         document.getElementById("drinkName").innerHTML = response.drinks[0].strDrink;
-        document.getElementById("beverage").innerHTML = response.drinks[0].strInstructions;
 
         if(response.drinks[0].strDrinkThumb !== null){
           // $('#drinkPic').style.background-Image = drinkPicURL;
