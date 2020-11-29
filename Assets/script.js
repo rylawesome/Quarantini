@@ -9,12 +9,16 @@
 // 
 
 //This is how to comment in javascript
+//user's drink of choice
 var drink = "";
+//cocktailDB URL+user's drink input
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
+//Giphy URL+user's drink input
 var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
-var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
+//hides link to giphy until user has one to access
 document.getElementById("giphy-link").style.display = 'none';
 
+//adds ingredients, measurements, instructions, and image to html
 $("#run-search").on("click", function(event) {
     event.preventDefault();
     document.getElementById("beverage").innerHTML = "";
@@ -25,22 +29,22 @@ $("#run-search").on("click", function(event) {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        console.log(response)
+        //puts the API drink thumbnail as a var
         var drinkThumb = response.drinks[0].strDrinkThumb + "/preview";
         //var drinkPicURL= 'url(' + drinkThumb + ')'
-        //Lists ingredients/ammt per ingredient
+        //drinkInfo used to access the info on the first drink found by API
         var drinkInfo = response.drinks[0];
+        //Create a list element
         var node = document.createElement('LI');
+        //create a node element to append to list
         var instructions = document.createTextNode(response.drinks[0].strInstructions);
-        console.log(drinkInfo);
+        //loop thru measurements and ingredients, sort out null values and append new items
         for(i = 1; i <= 15; i++) {
           if (drinkInfo['strMeasure' + i] !== null) {
-            console.log(drinkInfo['strMeasure' + i]);
             var measureNode = document.createTextNode(drinkInfo['strMeasure' + i]);
             node.appendChild(measureNode);
           }
           if (drinkInfo['strIngredient' + i] !== null) {
-          console.log(drinkInfo['strIngredient' + i]);
           var ingNode = document.createTextNode(drinkInfo['strIngredient' + i]);
           node.appendChild(ingNode);
           }
