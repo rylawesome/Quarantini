@@ -1,12 +1,22 @@
 // Pop Up Age Verification 
-// setTimeout(function(){
-//   $('.modal').modal('open')}, 1500);
+setTimeout(function(){
+  $('.modal').modal('open')}, 1500);
 
-// $(document).ready(function(){
-//   $('.modal').modal();
-// });
+$(document).ready(function(){
+  $('.modal').modal();
+});
+//Hides search bar if age not verified//
+$(document).ready(function(){
+  $('#noBtn').click(function(){
+    $('.formContainer').hide()
+  })
+});
+$(document).ready(function(){
+  $('#yesBtn').click(function(){
+    $('.modal').modal();
+  })
+});
 
-// 
 
 //This is how to comment in javascript
 var drink = "";
