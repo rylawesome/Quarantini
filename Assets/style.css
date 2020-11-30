@@ -128,48 +128,40 @@ li {
 
 
 /* Modal Styling */
+h4 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    padding: 10px;
+}
 
 .modal{
     position: fixed;
     height: 100%;
-    width: 75%;
-    z-index:  1;
-    left: 0;
-    top: 0;
-    left:0;
-    overflow: auto;
-    background-color: rgb(220,220, 220, 0.5);
+    width: 50%;
+    overflow: hidden;
 }
 
-/* .modal-content{ */
-    /* background-color: #f4f4f4;
-    height: 50%
-    width: 50%; */
-    /* padding: 70px; */
-    /* position:  */
-}
-
-h4 {
-    color: black;
-    /* background-color: blue; */
-    text-align: center;
-    font-weight: bold;
-    font-family: 'Playfair Display'
+/* .modal-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;  
+} */
+.agequestion{
+    margin-top: 50px;
 }
 
 .agequestion, .agetext {
-    color: blue;
     text-align: center;
-    font-size: 30px;
-
-
-}
-
-.modal-close{
-    text-align: center;
-
+    color:red;
+    font-size: 35px;
 }
 
 .hero {
     align-items: center;
+}
+
+.center{
+    font-size: 25px;
 }
