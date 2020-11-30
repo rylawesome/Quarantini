@@ -15,6 +15,13 @@ var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
 document.getElementById("giphy-link").style.display = 'none';
 
+
+//remove hide class at on click event "submit button"
+$("button").click(function(){
+  $("div").removeClass("hide");
+});
+
+
 $("#run-search").on("click", function(event) {
     event.preventDefault();
     document.getElementById("beverage").innerHTML = "";
