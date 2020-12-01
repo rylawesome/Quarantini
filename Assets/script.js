@@ -13,7 +13,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
   $('#yesBtn').click(function(){
-    $('.modal').modal();
+    $('.modal').modal('close');
   })
 });
 
