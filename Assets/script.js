@@ -21,7 +21,7 @@ $(document).ready(function(){
 //This is how to comment in javascript
 var drink = "";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
-var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
+var queryURLgiphy = "https://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
 document.getElementById("giphy-link").style.display = 'none';
 
@@ -37,7 +37,7 @@ $("#run-search").on("click", function(event) {
     document.getElementById("beverage").innerHTML = "";
     drink = document.getElementById("search-term").value;
     queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drink;
-    queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
+    queryURLgiphy = "https://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key=KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV&limit=5";
     $.ajax({
         url: queryURL,
         method: "GET"
