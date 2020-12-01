@@ -1,14 +1,28 @@
 // Pop Up Age Verification 
-// setTimeout(function(){
-//   $('.modal').modal('open')}, 1500);
+//setTimeout(function(){
+//  $('.modal').modal('open')}, 1500);
 
-// $(document).ready(function(){
-//   $('.modal').modal();
-// });
+//$(document).ready(function(){
+//  $('.modal').modal();
+//});
+//Hides search bar if age not verified//
+//$(document).ready(function(){
+//  $('#noBtn').click(function(){
+//    $('.formContainer').hide()
+//  })
+//});
+//$(document).ready(function(){
+//  $('#yesBtn').click(function(){
+//    $('.modal').modal();
+//  })
+//});
 
-// 
 
 //This is how to comment in javascript
+
+//Giphy API key
+//KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV
+
 //user's drink of choice
 var drink = "";
 //cocktailDB URL+user's drink input
@@ -18,7 +32,13 @@ var queryURLgiphy = "http://api.giphy.com/v1/gifs/search?q=" + drink + "&api_key
 //hides link to giphy until user has one to access
 document.getElementById("giphy-link").style.display = 'none';
 
-//adds ingredients, measurements, instructions, and image to html
+
+//remove hide class at on click event "submit button"
+$("button").click(function(){
+  $("div").removeClass("hide");
+});
+
+
 $("#run-search").on("click", function(event) {
     event.preventDefault();
     document.getElementById("beverage").innerHTML = "";
@@ -78,16 +98,11 @@ $("#run-search").on("click", function(event) {
         url: queryURLgiphy,
         method: "GET"
       }).then(function(response) {
-        console.log(queryURLgiphy);
-        console.log(response);
         document.getElementById("giphy-embed").src = response.data[0].embed_url;
         document.getElementById("giphy-link").href = response.data[0].url;
         document.getElementById("giphy-link").style.display = 'block';
       });
 });
-
-  //Giphy API key
-  //KzTNLUmjkNMNh8q6dfPusWKX78lyCNaV
 
   var enteredDrinks= [];
   var recentlyViewed = $("#recentlyViewed")
